@@ -43,7 +43,10 @@ class MatchspiderSpider(scrapy.Spider):
                  'https://www.besoccer.com/competition/europa_league',
                  'https://www.besoccer.com/competition/conference-league',
                  'https://www.besoccer.com/competition/premier-league-ukraine',
-                 "https://www.besoccer.com/competition/primeira_liga"]
+                 "https://www.besoccer.com/competition/primeira_liga",
+                 "https://www.besoccer.com/competition/mls",
+                 "https://www.besoccer.com/Competition/euro", 
+                 "https://www.besoccer.com/Competition/copa_america"]
 
         hiddenPanels = response.css('div.panel.hiddenPanel')
         panels = response.css('div.panel')
