@@ -52,17 +52,17 @@ class MatchspiderSpider(scrapy.Spider):
             if hiddenPanel.css('a::attr(href)').get() in liste : 
                 matches = hiddenPanel.css('a[href^="https://www.besoccer.com/match"]::attr(href)').getall()
                 for match in matches :
-                    yield response.follow(match , callback  = self.parse_match_page)
+                    yield response.follow(match, callback= self.parse_match_page)
         
         for panel in panels : 
             if panel.css('a::attr(href)').get() in liste : 
                 soccers = panel.css('a[href^="https://www.besoccer.com/match"]::attr(href)').getall()
                 for soccer in soccers : 
-                    yield response.follow(soccer , callback  = self.parse_match_page)
+                    yield response.follow(soccer, callback= self.parse_match_page)
 
         next_page = response.css('li.tab a ::attr(href)')[2].get() #->'https://www.besoccer.com/livescore/...'
-
-        if (next_page is not None) and (next_page != 'https://www.besoccer.com/livescore/2014-12-31') :
+# and i or yaptım 
+        if (next_page is not None) or (next_page != 'https://www.besoccer.com/livescore/2014-12-31') :
             yield scrapy.Request(next_page, meta=dict(
 				playwright = True,
 				playwright_include_page = True, 
