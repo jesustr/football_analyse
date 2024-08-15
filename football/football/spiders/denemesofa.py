@@ -12,7 +12,7 @@ class DenemesofaSpider(scrapy.Spider):
     allowed_domains = ["www.sofascore.com"]
     
     def start_requests(self):    
-        with open('/Users/icy/Desktop/scrapping_scrapy_football/football/football/spiders/sofa_temiz_urls/son_eksik_maclar_unscraped.txt', 'r') as file:
+        with open('/Users/icy/Desktop/scrapping_scrapy_football/football/football/spiders/sofa_temiz_urls/filtered_week_match_links.txt', 'r') as file:
             urls = file.readlines()
              # Bin bin seçerek devam et,  yüksek seçimler sıknııtılı ram yetmiyor gibi sorunlar çıkıyor.
             for url in urls:  
