@@ -1,5 +1,4 @@
--A scraping project for Besoccer (a football match analysis/tracking website). 
+-Sofascore scrapping
 
--It scrapes all 'match stats' part  and basic match information from matches up to 2015.
+-It scrapes all 'match stats' part  and basic match information from matches up to 2017.
 
--I have placed the sample file as an example.(CSV file)
