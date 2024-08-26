@@ -8,8 +8,8 @@ import time
 ## 2024 U SCRAPE ETMEYE 27 JUNE DAN BAŞLADIM.
 class MatchspiderSpider(scrapy.Spider):
     name = "fbrefscrape"  
-    start_date = datetime(2024, 8, 12)
-    end_date = datetime(2024, 8, 9 )
+    start_date = datetime(2024, 8, 25)
+    end_date = datetime(2024, 8, 23 )
 
     def start_requests(self):    
         date = self.start_date  
